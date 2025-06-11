@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: linear-gradient(skyblue,white);
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: cadetblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.Farm2Go{
+    font-size: 30px;
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    color: white;
+    opacity: 0.5;
+    font-size: 50px;
+
+    
+}
+nav ul{
+    float: right;
+     margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 10px;
+}
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(190, 41, 41);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+ }
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.fruits{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.apple,.orange,.strawberry,.pineapple,.sapota,.cherries,.banana,.mango,.watermelon,.kiwi,.grapes,.papaya{
+    width: 300px;
+    height: 400px;
+    background-color: brown;
+    /* margin-left: 10%; */
+    margin-top: 60px;
+    animation: fruitss 3s ease-in infinite;
+}
+@keyframes fruitss{
+    0%{
+        background-image: linear-gradient(to top right,red,black);
+        
+    }
+    25%{
+        background-image: radial-gradient(circle,darkviolet,darkgreen);
+    }
+    50%{
+        background-image: linear-gradient(to bottom left,white,blue);
+    }
+    75%{
+        background: conic-gradient(red,yellow,green,blue,red);
+    }
+    100%{
+        background: conic-gradient(from 90deg,cadetblue,chartreuse);
+    }
+}
+.apple img,.orange img,.strawberry img,.pineapple img,.sapota img,.cherries img,.banana img,.mango img,.watermelon img,.kiwi img,.grapes img,.papaya img{
+    width: 100%;
+    height: 300px;
+    border: 2px solid rgb(20, 9, 185);
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 600%;
+}
+button{
+    margin-left: 25%;
+    padding: 5px 40px;
+    margin-top: 6%;
+    border-radius: 5px;
+   border-color: chartreuse;
+   color: azure;
+   font-size: 20px;
+   background-image: radial-gradient(ellipse,blue,pink);
+   box-shadow: 0px 0px 20px rgb(8, 35, 151);
+}
